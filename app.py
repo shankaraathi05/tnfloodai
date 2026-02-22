@@ -1,6 +1,11 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
+os.environ["STREAMLIT_SERVER_HEADLESS"] = "true"
+st.set_option("client.showErrorDetails", False)
+st.set_option("client.toolbarMode", "minimal")
+from datetime import datetime
 
 st.set_page_config(
     page_title="TN Flood AI Dashboard",
@@ -290,4 +295,5 @@ st.download_button(
 )
 
 st.markdown("---")
+
 st.markdown("Developed by CSE Team | Government Hackathon 2026")
